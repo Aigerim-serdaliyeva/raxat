@@ -160,6 +160,21 @@ $(document).ready(function () {
     }
   });
 
+  $("[data-remodal-info]").click(function() {
+    var target = $(this).data('remodal-target');
+    var json = $(this).data('remodal-info');
+
+    var $model = $('[data-remodal-id="' + target + '"]');
+    var info = json["info"];
+
+    for (var i = 0; i < info.length; i++) {
+      var prop = info[i]["prop"];
+      var val = info[i]["value"];
+      $model.find('[name="' + prop + '"]').val(val);
+    }
+
+  })
+
   $(".carousel-product").owlCarousel({
     loop: false,
     dots: false,
@@ -210,7 +225,7 @@ $(document).ready(function () {
     dots: false,
     nav: true,
     smartSpeed: 500,
-    margin: 30,
+    margin: 10,
     navText: ['', ''],
     responsive: {
       0: { items: 1, mouseDrag: false, },

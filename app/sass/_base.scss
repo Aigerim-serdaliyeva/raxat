@@ -263,7 +263,8 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     text-align: left;
     color: red;
-    padding-left: 35px;
+    padding-left: 10px;
+    font-size: 12px;
     margin-top: 5px;
 	}
 
@@ -404,8 +405,8 @@ h1, h2, h3, h4, h5, h6 {
       &__content {
         display: flex;
         justify-content: space-between;
-        // align-items: flex-start;
-        align-items: center;
+        align-items: flex-start;
+        // align-items: center;
       }
     }
 
@@ -415,7 +416,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &--vertical {
-    // max-width: 300px;
     
     .form {
       &__title {
@@ -427,7 +427,12 @@ h1, h2, h3, h4, h5, h6 {
           margin: 0 auto 10px;  
           text-align: center;  
         }
-      }      
+      }
+      
+      &__info, &__srok {
+        max-width: 290px;
+        margin: 0 auto 10px;
+      }
     }
 
     .button {

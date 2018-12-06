@@ -356,8 +356,11 @@
   .form {
     background-image: url("../img/design-form-back.png");
     background-repeat: no-repeat;
-    // background-position: center center;
     background-size: contain;
+    width: 372px;
+    height: 383px;
+    padding-top: 55px;
+    margin: -55px auto 0;
   }
 }
 
@@ -388,6 +391,10 @@
     max-width: 910px;
     margin: 0 auto;
     padding: 0 50px;
+
+    .owl-item {
+      padding: 10px 10px 15px;
+    }
   }
 
   .pismo {

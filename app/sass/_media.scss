@@ -201,6 +201,10 @@
             max-width: 500px;
           }          
         }
+
+        &__info, &__srok {
+          max-width: none;
+        }
       }
     }
   }
@@ -272,6 +276,11 @@
         }
       }
     }
+
+    &-thanks {
+      background-image: none;
+      background-color: $accent;
+    }
   }
 }
 
@@ -305,6 +314,15 @@
         &__text {
           font-size: 14px;
         }
+      }
+    }
+
+    &-design {
+
+      .form {
+        width: auto;
+        height: auto;
+        background-image: none;
       }
     }
     
