@@ -198,6 +198,7 @@
     &__text {
       font-size: 16px;
       letter-spacing: -0.2px;
+      max-width: 430px;
     }
   }
 }
@@ -404,6 +405,10 @@
 
 .s-comand {
   background-color: #ebebec;
+
+  .carousel-comand {
+    display: none;
+  }
 
   .comand {
     &__img {

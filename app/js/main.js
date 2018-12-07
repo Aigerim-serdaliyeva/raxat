@@ -234,6 +234,19 @@ $(document).ready(function () {
     },
   });
 
+  $(".carousel-comand").owlCarousel({
+    loop: false,
+    dots: false,
+    nav: true,
+    smartSpeed: 500,
+    margin: 10,
+    navText: ['', ''],
+    responsive: {
+      0: { items: 1, mouseDrag: false, },
+      576: { items: 2, mouseDrag: true, },
+    },
+  });
+
   $(".carousel-certificates").owlCarousel({
     loop: true,
     smartSpeed: 500,

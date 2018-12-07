@@ -260,6 +260,16 @@
       }
     }
 
+    &-comand {
+      &__content {
+        display: none;
+      }
+
+      .carousel-comand {
+        display: block;
+      }
+    }
+
     &-contact {
       .contact {
         position: relative;
