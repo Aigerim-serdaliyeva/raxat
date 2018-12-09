@@ -261,10 +261,26 @@ $(document).ready(function () {
 
 });
 
+function handleFiles(fileInput) {
+	var span = fileInput.nextElementSibling;
+  var files = fileInput.files;
+  var defaultText = span.getAttribute('data-default');
+  
+  if (files.length > 0) {
+  	span.innerHTML = files[0].name;
+    span.setAttribute('title', files[0].name);
+  } else {
+  	span.innerHTML = defaultText;
+    span.setAttribute('title', '');
+  }
+}
+
+
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
+
 
 // в основном для проверки поле email
 function checkInput($input) {

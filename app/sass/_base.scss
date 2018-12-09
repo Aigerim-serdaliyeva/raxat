@@ -358,6 +358,8 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding-left: 35px;
     margin-bottom: 10px;
+    margin-top: 5px;
+    display: inline-block;
     &::before {
       content: "";
       width: 24px;
@@ -365,7 +367,8 @@ h1, h2, h3, h4, h5, h6 {
       background-image: url("../img/upload.png");
       position: absolute;
       left: 0;
-      top: 5px;
+      top: 50%;
+      margin-top: -11px;
     }
   }
 
@@ -534,4 +537,26 @@ h1, h2, h3, h4, h5, h6 {
     background-color: $accent;
     padding: 60px 25px;
   }
+}
+
+
+.custom-file {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 135px;
+}
+
+.custom-file [type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
 }
