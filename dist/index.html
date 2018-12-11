@@ -12,6 +12,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="yandex-verification" content="85bb6898180b3b99" />
 
   <meta property="og:image" content="path/to/image.jpg">
   <link rel="shortcut icon" href="img/favicon.ico?v=11" type="image/x-icon">
@@ -238,14 +239,13 @@
         </div>
 
         <div class="form form--horizontal wow fadeIn">
-          <form action="/mail.php" method="post">
+          <form action="/mail.php" method="post" enctype="multipart/form-data">
             <div class="form__title">У вас есть готовые материалы для печати?  <br>
               Сравните их с требованиями печати и пришлите нам.</div>
             <div class="form__consultant">В течение 15 минут наш специалист свяжется с Вами и проконсультирует по срокам и стоимости</div>
             <div class="form__content">
 
-              <input type="hidden" name="info" value="У вас есть готовые материалы для печати? 
-              Сравните их с требованиями печати и пришлите нам.">
+              <input type="hidden" name="info" value="Заказать печать">
 
               <div class="input-div">
                 <input type="text" class="input" name="name" placeholder="Представьтесь">
@@ -256,15 +256,18 @@
                 <span class="error-message">Заполните это поле</span>
               </div>
 
-              <a href="" class="upload">Прикрепить <br>
-                материалы</a>
+              <label class="custom-file">
+                <input type="file" name="file" onchange="handleFiles(this)">
+                <span title="" class="upload" data-default="Прикрепить материалы">Прикрепить <br>
+                  материалы</span>
+              </label>
 
               <button class="button ajax-submit" type="submit" id="zakazat_pe4at">Заказать печать</button>
 
             </div>
 
             <div class="form__download">
-              <a href="#" class="download">Скачать <br>
+              <a href="./files/Тех_для_клиентов.pdf" download class="download">Скачать <br>
                 технические <br>
                 требования</a>
             </div>
